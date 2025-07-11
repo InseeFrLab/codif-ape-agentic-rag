@@ -1,0 +1,22 @@
+[project]
+name = "codif-ape-agentic-rag"
+version = "0.1.0"
+description = "Classify activities with an agentic approach"
+readme = "README.md"
+authors = [
+    { name = "nrandriamanana", email = "nathan.randriamanana@insee.fr" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ag2>=0.9.6",
+    "fastapi>=0.116.0",
+    "humanize>=4.12.3",
+    "mlflow>=3.1.1",
+    "openai>=1.95.0",
+    "pandas>=2.3.1",
+    "pyarrow>=20.0.0",
+    "python-dotenv>=1.1.1",
+    "s3fs>=2025.5.1",
+    "streamlit>=1.46.1",
+    "uvicorn>=0.35.0",
+]

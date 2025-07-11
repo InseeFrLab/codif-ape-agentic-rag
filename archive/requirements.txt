@@ -1,0 +1,11 @@
+ag2
+openai
+mlflow
+s3fs
+pyarrow
+pandas
+streamlit
+python-dotenv
+uvicorn
+fastapi
+humanize

@@ -1,0 +1,42 @@
+[project]
+name = "codif-ape-agentic-rag"
+version = "0.1.0"
+description = "Classify activities with an agentic approach"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Nathan Randriamanana", email = "nathan.randriamanana@insee.fr" }
+]
+
+dependencies = [
+    "ag2>=0.9.5",     # AG2 agents (anciennement AutoGen) :contentReference[oaicite:3]{index=3}
+    "openai>=1.69.0",          # nécessaire avec AG2 >=0.2.27 :contentReference[oaicite:4]{index=4}
+    "mlflow>=2.21.3",          # suivi des expériences
+    "s3fs>=2024.12.0",         # accès aux buckets S3
+    "pandas>=2.2.3",
+    "pyarrow>=14.0.1",         # compat avec pandas + S3
+    "python-dotenv>=1.1.0",    # chargement variables .env
+    "uvicorn>=0.34.0",
+    "fastapi>=0.115.12",       # API si besoin
+    "pydantic>=2.7.1",
+    "nest-asyncio>=1.6.0",
+    "humanize>=4.12.2",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.4.0",
+    "pre-commit>=3.7.0",
+    "ipykernel>=6.29.5",
+    "jupyterlab>=4.2.0",
+    "pip>=25.0.1",
+]
+
+[tool.setuptools]
+packages = ["src", "app"]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[tool.ruff]
+line-length = 130
